@@ -1213,6 +1213,127 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ===== CORPORATE DISCOUNTS STYLING ===== */
+    .corporate-discounts {
+      margin-top: 60px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .discount-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .table-container-lp {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--r);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .table-container-lp table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    .table-container-lp thead tr {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 2px solid var(--gold);
+    }
+    .table-container-lp th {
+      padding: 16px 20px;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .table-container-lp th.text-center, .table-container-lp td.text-center {
+      text-align: center;
+    }
+    .table-container-lp th.text-right, .table-container-lp td.text-right {
+      text-align: right;
+    }
+    .table-container-lp td {
+      padding: 16px 20px;
+    }
+    .table-container-lp tbody tr {
+      border-bottom: 1px solid var(--ivory);
+    }
+    .table-container-lp tbody tr.highlighted {
+      background: var(--gold-light);
+    }
+    .policy-details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      text-align: left;
+    }
+    .policy-card, .examples-card {
+      border: 1px solid var(--gold-border);
+      border-radius: var(--r);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .policy-card {
+      background: var(--ivory);
+    }
+    .examples-card {
+      background: var(--white);
+    }
+    .policy-card h4, .examples-card h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--navy);
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--gold-border);
+      padding-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .policy-card ul, .examples-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .examples-card ul {
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .policy-card li {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+    }
+    .policy-card li i {
+      color: var(--gold);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .examples-card li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--ivory);
+      padding-bottom: 6px;
+    }
+    .examples-card li:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .discount-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1566,6 +1687,93 @@
               <div class="inc-title">Red de Contactos</div>
               <p class="inc-desc">Formación de un grupo selecto de empresarios y directivos de la región.</p>
             </div>
+          </div>
+        </div>
+
+        <!-- ===== PLANES CORPORATIVOS Y DESCUENTOS ===== -->
+        <div class="corporate-discounts reveal delay-2">
+          <div class="section-header-centered" style="margin-bottom: 40px;">
+            <span class="tagline-gold">Planes Especiales</span>
+            <h2 style="font-size: 24px;">Tabla de <span>Inversión Corporativa</span></h2>
+            <p class="section-subtitle" style="margin-top: 10px; font-size: 14px;">Descuentos progresivos diseñados para parejas y delegaciones de una misma empresa.</p>
+          </div>
+
+          <div class="discount-grid">
+            
+            <!-- TABLE SIDE -->
+            <div class="table-container-lp">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Categoría</th>
+                    <th class="text-center">Desc. por Persona</th>
+                    <th class="text-right">Valor Final</th>
+                  </tr>
+                </thead>
+                <tbody style="color: var(--text-muted);">
+                  <tr>
+                    <td style="font-weight: 500; color: var(--navy);">1 Persona</td>
+                    <td class="text-center">—</td>
+                    <td class="text-right" style="font-weight: 600; color: var(--navy);">USD $350</td>
+                  </tr>
+                  <tr class="highlighted">
+                    <td style="font-weight: 500; color: var(--navy);">2 Personas <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; text-transform: none; font-size: 14px; font-weight: 400; color: var(--gold);">(Pareja / Casal)</span></td>
+                    <td class="text-center" style="color: #03543f; font-weight: 600;">USD $35</td>
+                    <td class="text-right" style="font-weight: 600; color: var(--navy);">USD $315 <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">/ pers.</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 500; color: var(--navy);">3 Colaboradores <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">(Misma Empresa)</span></td>
+                    <td class="text-center" style="color: #03543f; font-weight: 600;">USD $15</td>
+                    <td class="text-right" style="font-weight: 600; color: var(--navy);">USD $335 <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">/ pers.</span></td>
+                  </tr>
+                  <tr class="highlighted">
+                    <td style="font-weight: 500; color: var(--navy);">4 a 5 Colaboradores <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">(Misma Empresa)</span></td>
+                    <td class="text-center" style="color: #03543f; font-weight: 600;">USD $25</td>
+                    <td class="text-right" style="font-weight: 600; color: var(--navy);">USD $325 <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">/ pers.</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 500; color: var(--navy);">6 o más Colaboradores <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">(Misma Empresa)</span></td>
+                    <td class="text-center" style="color: #03543f; font-weight: 600;">USD $35</td>
+                    <td class="text-right" style="font-weight: 600; color: var(--navy);">USD $315 <span style="font-size: 11px; font-weight: normal; color: var(--text-light);">/ pers.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- DETAIL & EXAMPLES SIDE -->
+            <div class="policy-details">
+              <div class="policy-card">
+                <h4>Política Corporativa</h4>
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span><strong>Inscripciones individuales</strong>: tarifa estándar de USD $350.</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span><strong>Parejas</strong>: reciben un beneficio exclusivo de USD $35 menos por participante (USD $315 cada uno).</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span><strong>Grupos Empresariales</strong>: descuentos escalonados aplicables a todos los colaboradores de una misma empresa.</span></li>
+                </ul>
+              </div>
+
+              <div class="examples-card">
+                <h4>Ejemplos Prácticos</h4>
+                <ul>
+                  <li>
+                    <span>👫 Pareja (2 pers.):</span>
+                    <strong>2 x USD $315 = USD $630</strong>
+                  </li>
+                  <li>
+                    <span>🏢 Empresa (3 pers.):</span>
+                    <strong>3 x USD $335 = USD $1.005</strong>
+                  </li>
+                  <li>
+                    <span>🏢 Empresa (5 pers.):</span>
+                    <strong>5 x USD $325 = USD $1.625</strong>
+                  </li>
+                  <li>
+                    <span>🏢 Empresa (10 pers.):</span>
+                    <strong>10 x USD $315 = USD $3.150</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
